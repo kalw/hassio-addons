@@ -22,9 +22,9 @@
   },
   "options": {
     "culture": "en",
-    "telemetry": true, // Opt-out of anonymous statistics Netdata use to make Netdata better.
-    "updates": false, // Prevent automatic updates of any kind.
-    "ssl": true,
+    "telemetry": "true", 
+    "updates": "false", 
+    "ssl": "true",
     "certfile": "fullchain.pem",
     "keyfile": "privkey.pem"
   },
