@@ -8,22 +8,15 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
 RUN \
-    # install required packages
-    apk add --no-cache alpine-sdk bash curl libuv-dev zlib-dev util-linux-dev libmnl-dev gcc make git autoconf automake pkgconfig python logrotate
-    # if you plan to run node.js Netdata plugins
-    apk add --no-cache -U nodejs
-    # download Netdata - the directory 'netdata' will be created
-    cd /usr/local/share/ && git clone --depth 1 --branch ${NETDATA_VERSION} https://github.com/netdata/netdata.git
-    cd netdata
-    # build it, install it, start it
-    ./netdata-installer.sh
-    # make Netdata start at boot
-    echo -e "#!/usr/bin/env bash\n/usr/sbin/netdata" >/etc/local.d/netdata.start
-    chmod 755 /etc/local.d/netdata.start
-    # make Netdata stop at shutdown
-    echo -e "#!/usr/bin/env bash\nkillall netdata" >/etc/local.d/netdata.stop
-    chmod 755 /etc/local.d/netdata.stop
-    # enable the local service to start automatically
+    apk add --no-cache alpine-sdk bash curl libuv-dev zlib-dev util-linux-dev libmnl-dev gcc make git autoconf automake pkgconfig python logrotate && \
+    apk add --no-cache -U nodejs && \
+    cd /usr/local/share/ && git clone --depth 1 --branch ${NETDATA_VERSION} https://github.com/netdata/netdata.git && \
+    cd netdata && \
+    ./netdata-installer.sh && \
+    echo -e "#!/usr/bin/env bash\n/usr/sbin/netdata" >/etc/local.d/netdata.start && \
+    chmod 755 /etc/local.d/netdata.start && \
+    echo -e "#!/usr/bin/env bash\nkillall netdata" >/etc/local.d/netdata.stop && \
+    chmod 755 /etc/local.d/netdata.stop && \
     rc-update add local
 
 # Copy root filesystem
