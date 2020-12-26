@@ -1,24 +1,19 @@
 ARG BUILD_FROM=hassioaddons/base:latest
-ARG NETDATA_VERSION="v1.23.2"
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
+ARG NETDATA_VERSION="v1.23.2"
 
 # Set shell
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+SHELL ["/bin/bash", "-x" ,"-o", "pipefail", "-c"]
 
 # Setup base
 RUN \
-    apk add --no-cache alpine-sdk bash curl libuv-dev zlib-dev util-linux-dev libmnl-dev gcc make git autoconf automake pkgconfig python logrotate && \
+    apk add --no-cache alpine-sdk bash curl libuv-dev zlib-dev util-linux-dev libmnl-dev gcc make git autoconf automake pkgconfig python3 logrotate cmake libressl-dev && \
     apk add --no-cache -U nodejs && \
     cd /usr/local/share/ && git clone --depth 1 --branch ${NETDATA_VERSION} https://github.com/netdata/netdata.git && \
     cd netdata && \
-    ./netdata-installer.sh && \
-    echo -e "#!/usr/bin/env bash\n/usr/sbin/netdata" >/etc/local.d/netdata.start && \
-    chmod 755 /etc/local.d/netdata.start && \
-    echo -e "#!/usr/bin/env bash\nkillall netdata" >/etc/local.d/netdata.stop && \
-    chmod 755 /etc/local.d/netdata.stop && \
-    rc-update add local
-
+    ./netdata-installer.sh 
+    
 # Copy root filesystem
 COPY rootfs /
 
