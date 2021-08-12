@@ -3,5 +3,11 @@
     "version": "0.0.1",
     "slug": "netdata",
     "description": "Netdata engine",
-    "url": "https://github.com/kalw/hassio-addon-netdata"
+    "url": "https://github.com/kalw/hassio-addon-netdata",
+    "arch": [
+        "amd64",
+        "armhf",
+        "i386",
+        "aarch64"
+      ]
 }
