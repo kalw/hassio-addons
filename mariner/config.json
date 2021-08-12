@@ -1,0 +1,7 @@
+{
+    "name": "Mariner DLP engine",
+    "version": "0.0.1",
+    "slug": "mariner",
+    "description": "Mariner DLP engine",
+    "url": "https://github.com/kalw/hassio-addon-mariner"
+}
