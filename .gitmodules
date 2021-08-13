@@ -1,6 +1,0 @@
-[submodule "mariner"]
-	path = mariner
-	url = https://github.com/kalw/hassio-addon-mariner
-[submodule "netdata"]
-	path = netdata
-	url = https://github.com/kalw/hassio-addon-netdata

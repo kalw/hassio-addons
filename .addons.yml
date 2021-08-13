@@ -1,0 +1,7 @@
+---
+channel: stable
+addons:
+  netdata:
+    repository: kalw/hassio-addons-netdata
+    target: netdata
+    image: ghcr.io/kalw/hassio-addons-netdata/{arch}
