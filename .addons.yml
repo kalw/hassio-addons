@@ -5,3 +5,11 @@ addons:
     repository: kalw/hassio-addons-netdata
     target: netdata
     image: ghcr.io/kalw/hassio-addons-netdata/{arch}
+  mariner:
+    repository: kalw/hassio-addons-mariner
+    target: netdata
+    image: ghcr.io/kalw/hassio-addons-mariner/{arch}
+  mjpegStreamer:
+    repository: kalw/hassio-addons-mjpegStreamer
+    target: netdata
+    image: ghcr.io/kalw/hassio-addons-mjpegStreamer/{arch}
