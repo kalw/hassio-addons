@@ -1,5 +1,5 @@
 {
-    "name": "Hass.IO kalw add-on repository",
-    "url": "https://github.com/kalw/hassio-addons/",
-    "maintainer": "Kalw <kalw@indolore.net>"
-  }
+  "name": "Hass.IO kalw add-on repository (stable)",
+  "url": "https://github.com/kalw/hassio-addons/",
+  "maintainer": "Kalw <kalw@indolore.net>"
+}

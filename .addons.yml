@@ -1,15 +1,7 @@
 ---
 channel: stable
 addons:
-  netdata:
-    repository: kalw/hassio-addons-netdata
-    target: netdata
-    image: ghcr.io/kalw/hassio-addons-netdata/{arch}
-  mariner:
-    repository: kalw/hassio-addons-mariner
-    target: netdata
-    image: ghcr.io/kalw/hassio-addons-mariner/{arch}
-  mjpegStreamer:
-    repository: kalw/hassio-addons-mjpegStreamer
-    target: netdata
-    image: ghcr.io/kalw/hassio-addons-mjpegStreamer/{arch}
+  minio:
+    repository: kalw/hassio-addon-minio
+    target: minio
+    image: ghcr.io/kalw/hassio-addon-minio/${arch}
