@@ -8,4 +8,4 @@ addons:
   ha_stats_lake:
     repository: kalw/ha-stats-lake
     target: ha_stats
-    image: ghcr.io/kalw/ha-stats-lake/ha-stats
+    image: ghcr.io/kalw/ha_stats_lake/{arch}
