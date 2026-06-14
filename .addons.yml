@@ -5,3 +5,7 @@ addons:
     repository: kalw/hassio-addon-minio
     target: minio
     image: ghcr.io/kalw/hassio-addon-minio/${arch}
+  ha_stats_lake:
+    repository: kalw/ha-stats-lake
+    target: ha_stats
+    image: ghcr.io/kalw/ha-stats-lake/ha-stats
