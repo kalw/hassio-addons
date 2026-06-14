@@ -6,7 +6,6 @@ addons:
     target: minio
     image: ghcr.io/kalw/hassio-addon-minio/${arch}
   ha_stats_lake:
-    channel: edge
     repository: kalw/ha-stats-lake
     target: ha_stats
     image: ghcr.io/kalw/ha_stats_lake/{arch}
