@@ -1,10 +1,9 @@
----
 channel: stable
 addons:
-  minio:
+  seaweedfs:
     repository: kalw/hassio-addon-seaweedfs
-    target: minio
-    image: ghcr.io/kalw/seaweedfs/${arch}
+    target: seaweedfs
+    image: ghcr.io/kalw/seaweedfs/{arch}
   ha_stats_lake:
     repository: kalw/ha-stats-lake
     target: ha_stats
