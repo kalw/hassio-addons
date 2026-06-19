@@ -8,3 +8,7 @@ addons:
     repository: kalw/hassio-addon-stats-lake
     target: ha_stats
     image: ghcr.io/kalw/ha_stats_lake/{arch}
+  vault:
+    repository: kalw/hassio-addon-vault
+    target: vault
+    image: ghcr.io/kalw/vault/{arch}
