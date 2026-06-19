@@ -4,7 +4,7 @@ addons:
   minio:
     repository: kalw/hassio-addon-seaweedfs
     target: minio
-    image: ghcr.io/kalw/hassio-addon-minio/${arch}
+    image: ghcr.io/kalw/seaweedfs/${arch}
   ha_stats_lake:
     repository: kalw/ha-stats-lake
     target: ha_stats
