@@ -12,4 +12,4 @@ addons:
   vault:
     repository: kalw/hassio-addon-vault
     target: vault
-    image: ghcr.io/kalw/hassio-addon-vault/{arch}
+    image: ghcr.io/kalw/vault/{arch}
