@@ -5,10 +5,10 @@ addons:
     repository: kalw/hassio-addon-seaweedfs
     target: seaweedfs
     image: ghcr.io/kalw/seaweedfs/{arch}
-  ha_stats_lake:
+  hassio-addon-stats-lake:
     repository: kalw/hassio-addon-stats-lake
     target: ha_stats
-    image: ghcr.io/kalw/ha_stats_lake/{arch}
+    image: ghcr.io/kalw/hassio-addon-stats-lake/{arch}
   hassio-addon-vault:
     repository: kalw/hassio-addon-vault
     target: vault
